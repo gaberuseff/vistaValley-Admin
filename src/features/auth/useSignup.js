@@ -4,7 +4,10 @@ import { signup as signupApi } from "../../services/apiAuth";
 
 function useSignup() {
     const { mutateAsync: signup, isPending: isSigningUp } = useMutation({
-        mutationFn: signupApi,
+        mutationFn: (newUser) => {
+            return;
+            // signupApi(newUser)
+        },
 
         onSuccess: () => {
             toast.success('Account created successfully, please verify the new email address');

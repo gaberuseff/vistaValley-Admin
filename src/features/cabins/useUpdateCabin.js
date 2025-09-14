@@ -6,7 +6,10 @@ function useUpdateCabin() {
     const queryClient = useQueryClient();
 
     const { mutate: updateCabin, isPending: isUpdating } = useMutation({
-        mutationFn: ({ newCabin, id }) => createUpdateCabin(newCabin, id),
+        mutationFn: ({ newCabin, id }) => {
+            return;
+            // createUpdateCabin(newCabin, id)
+        },
 
         onSuccess: () => {
             queryClient.invalidateQueries({

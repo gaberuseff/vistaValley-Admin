@@ -6,7 +6,10 @@ function useDeleteCabin() {
     const queryClient = useQueryClient();
 
     const { mutate: deletedCabin, isPending: isDeleting } = useMutation({
-        mutationFn: (id) => deleteCabin(id),
+        mutationFn: (id) => {
+            return;
+            // deleteCabin(id)
+        },
 
         onSuccess: () => {
             queryClient.invalidateQueries({

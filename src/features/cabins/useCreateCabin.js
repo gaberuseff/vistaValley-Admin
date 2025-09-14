@@ -6,7 +6,10 @@ function useCreateCabin() {
     const queryClient = useQueryClient();
 
     const { mutate: createCabin, isPending: isCreating } = useMutation({
-        mutationFn: (newCabin) => createCabinApi(newCabin),
+        mutationFn: (newCabin) => {
+            return;
+            // createCabinApi(newCabin)
+        },
 
         onSuccess: () => {
             queryClient.invalidateQueries({

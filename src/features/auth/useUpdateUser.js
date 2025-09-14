@@ -6,7 +6,10 @@ function useUpdateUser() {
     const queryClient = useQueryClient();
 
     const { mutate: updateUser, isPending: isUpdating } = useMutation({
-        mutationFn: updateCurrentUser,
+        mutationFn: (user) => {
+            return;
+            // updateCurrentUser(user)
+        },
 
         onSuccess: ({ user }) => {
             queryClient.setQueryData(['user'], user);
