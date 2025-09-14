@@ -29,7 +29,6 @@ const queryClient = new QueryClient({
 
 function App() {
   return (
-    
     <DarkModeProvider>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools

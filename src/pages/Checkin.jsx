@@ -1,7 +1,7 @@
-import CheckInBooking from "../features/chich-in-out/CheckInBooking";
+import CheckinBooking from "../features/chich-in-out/CheckinBooking";
 
 function Checkin() {
-  return <CheckInBooking />;
+  return <CheckinBooking />;
 }
 
 export default Checkin;
