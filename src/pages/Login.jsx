@@ -8,6 +8,8 @@ const LoginLayout = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  background-color: var(--color-grey-50);
 `;
 
 function Login() {
